@@ -1,8 +1,7 @@
 # AutoEncoders
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-##### Here, we show how to implement and test a deep autoencoder. 
 ### 1. Getting Started
-#### - Sample code to run DTOPS on all data (Iteratively cleaning training set, train LSTM, then run RVAE)
+#### - Sample code to run create,train and run an AE
 ```python
     from DeepAE import *
     import time
