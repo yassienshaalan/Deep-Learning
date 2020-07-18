@@ -1,7 +1,32 @@
 # AutoEncoders
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 ### 1. Getting Started
-#### - Sample code to run create,train and run an AE
+#### -  a) Loading Data 
+
+```python
+    import numpy as np
+    import ImShow as I
+    import matplotlib.pyplot as plt
+    from collections import Counter
+    
+    data = np.load("data.npk")
+    y = np.load("y.npk")
+    print ("Data Shape",data.shape)
+    #To print how many images for each digit
+    print (Counter(y.reshape(y.size)))
+    
+    #Show the image of one digit
+    one_pic = data[0].reshape(28,28)
+    plt.imshow(one_pic,cmap='gray')
+    plt.show()
+    Xpic = I.tile_raster_images(X = data, img_shape=(28,28), tile_shape=(10,10))
+    plt.imshow(Xpic,cmap='gray')
+    plt.show()
+    
+    
+    
+```
+#### -  b) Sample code to run create,train and run an AE
 ```python
     from DeepAE import *
     import time
